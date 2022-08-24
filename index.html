@@ -1,40 +1,244 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>React.js</h1>
+        </section>
+        <section>
+          <p style="font-size: 1em">
+            React is a declarative, efficient, and flexible
+            <b style="color: yellow">JavaScript library</b> for building user
+            interfaces.
+          </p>
+          <p style="font-size: 1em">
+            It was created in 2013 by Facebook during the process of integrating
+            chat to their social network
+          </p>
+          <p style="font-size: 1em">
+            Changes the view of the page without the page reload
+          </p>
+        </section>
+        <section>
+          <section>
+            <h3><span style="color: yellow">Library</span></h3>
+            <ul
+              style="
+                font-size: 0.9em;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+              "
+              id="fragments"
+            >
+              <li class="fragment fade-down" style="transition: 1s">
+                Сollection of helper modules, objects, classes, functions,
+                message templates, pre-written code and etc.
+              </li>
+              <li class="fragment fade-down" style="transition: 1s">
+                Flexbility in modifying and calling.
+              </li>
+              <li class="fragment fade-down" style="transition: 1s">
+                Designed to accomplish a specific purpose.
+              </li>
+              <li class="fragment fade-down" style="transition: 1s">
+                Ability to integrate into existing project.
+              </li>
+              <li
+                class="fragment fade-down"
+                style="
+                  transition: 1s;
+                  list-style: none;
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                "
+              >
+                <img
+                  style="width: 10%; height: 10%; background-color: #fff"
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Lodash.svg"
+                  alt=""
+                />
+                <img
+                  style="width: 20%; height: 10%"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Leaflet_logo.svg/909px-Leaflet_logo.svg.png"
+                  alt=""
+                />
+                <img
+                  style="width: 10%; height: 10%"
+                  src="https://www.chartjs.org/img/chartjs-logo.svg"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+          <section class="future">
+            <h3><span style="color: rgb(255, 64, 0)">Framework</span></h3>
+            <ul
+              style="
+                font-size: 0.9em;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+              "
+              id="fragments"
+            >
+              <li class="fragment fade-down" style="transition: 1s">
+                Foundation upon which developers build applications for specific
+                platforms.
+              </li>
+              <li class="fragment fade-down" style="transition: 1s">
+                Frameworks consist of a lot of APIs, compilers, toolsets,
+                support programs, libraries, etc.
+              </li>
+              <li class="fragment fade-down" style="transition: 1s">
+                Limited flexibility
+              </li>
+              <li class="fragment fade-down" style="transition: 1s">
+                Incorporating frameworks seamlessly into an existing project is
+                close to impossible.
+              </li>
+              <li
+                class="fragment fade-down"
+                style="
+                  transition: 1s;
+                  list-style: none;
+                  display: flex;
+                  justify-content: space-around;
+                "
+              >
+                <img
+                  style="width: 10%; height: 10%"
+                  src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg"
+                  alt=""
+                />
+                <img
+                  style="width: 10%; height: 10%"
+                  src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
+                  alt=""
+                />
+                <img
+                  style="width: 10%; height: 10%"
+                  src="https://upload.wikimedia.org/wikipedia/en/6/69/Ember.js_Logo_and_Mascot.png"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h2>Advantages of React</h2>
+          <p>
+            Allows to create complex interface from small code blocks -
+            components
+          </p>
+        </section>
+        <section>
+          <h2>Virtual DOM</h2>
+          <p>Manipulating DOM with JavaScript is slow</p>
+          <p>Virtual DOM is a lightweight copy of the actual DOM</p>
+          <ol style="font-size: 0.9em">
+            <li>Changes are made in Virtual DOM</li>
+            <li>
+              Virtual DOM is being compared to the actual DOM (object with
+              differences is built)
+            </li>
+            <li>React updates the actual DOM with maximal efficiency</li>
+          </ol>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <section>
+          <section>
+            <h2 id="fragment">JSX</h2>
+            <p class="fragment fade-down">JSX stands for JavaScript XML.</p>
+            <p class="fragment fade-down">
+              JSX allows us to write HTML in React.
+            </p>
+            <p class="fragment fade-down">
+              JSX makes it easier to write and add HTML in React.
+            </p>
+          </section>
+          <section class="future" data-auto-animate>
+            <h3 data-id="code-title">JSX Code Example</h3>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+							import React, { useState } from 'react';
+	
+							const element = (
+								<div>
+									<h1>Hello!</h1>
+									<h2>Good to see you here.</h2>
+								</div>
+							);
+						</code></pre>
+          </section>
+          <section class="future" data-auto-animate>
+            <h3 data-id="code-title">JSX is not a must</h3>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+							const myElement = <h1>Code with JSX</h1>;
+							
+							const myElement = React.createElement('h1', {}, 'No JSX');
+						</code></pre>
+          </section>
+          <section class="future" data-auto-animate>
+            <h3 data-id="code-title">JS in JSX</h3>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+				const App = () => {
+					const number = 10;
+					return (
+					 <div>
+					  <p>Number: {number}</p>
+					 </div>
+				)};
+						</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <h2>Components</h2>
+          <p>Piece of the UI that has its own logic and appearance.</p>
+          <p>Can be as small as a button, or as large as an entire page.</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
