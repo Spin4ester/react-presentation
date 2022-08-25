@@ -24,16 +24,14 @@
         </section>
         <section>
           <p style="font-size: 1em">
-            React is a declarative, efficient, and flexible
-            <b style="color: yellow">JavaScript library</b> for building user
-            interfaces.
+            A <b style="color: yellow">JavaScript library</b> for building user interfaces
           </p>
           <p style="font-size: 1em">
             It was created in 2013 by Facebook during the process of integrating
             chat to their social network
           </p>
           <p style="font-size: 1em">
-            Changes the view of the page without the page reload
+            Used for handling the view layer and can be used for web and mobile apps.
           </p>
         </section>
         <section>
@@ -143,37 +141,38 @@
               </li>
             </ul>
           </section>
-        </section>
-        <section>
-          <h2>Advantages of React</h2>
-          <p>
-            Allows to create complex interface from small code blocks -
-            components
-          </p>
+
+
+          <section class="future">
+            <h3><span style="color: rgb(255, 64, 0)">Difference</span></h3>
+            <p>Inversion of control</p>
+            <p style="font-size: 0.7em;">Library is like building a house, framework is buying a house</p>
+          </section>
+
         </section>
         <section>
           <h2>Virtual DOM</h2>
-          <p>Manipulating DOM with JavaScript is slow</p>
-          <p>Virtual DOM is a lightweight copy of the actual DOM</p>
+          <p style="font-size: 0.8em;">Manipulating DOM with JavaScript is slow</p>
+          <p style="font-size: 0.8em;">Virtual DOM is a lightweight copy of the actual DOM</p>
           <ol style="font-size: 0.9em">
-            <li>Changes are made in Virtual DOM</li>
-            <li>
+            <li style="font-size: 0.7em;">Changes are made in Virtual DOM</li>
+            <li style="font-size: 0.7em;">
               Virtual DOM is being compared to the actual DOM (object with
               differences is built)
             </li>
-            <li>React updates the actual DOM with maximal efficiency</li>
+            <li style="font-size: 0.7em;">React updates the actual DOM with maximal efficiency</li>
           </ol>
         </section>
 
         <section>
           <section>
             <h2 id="fragment">JSX</h2>
-            <p class="fragment fade-down">JSX stands for JavaScript XML.</p>
-            <p class="fragment fade-down">
+            <p style="font-size: 0.8em;" class="fragment fade-down">JSX stands for JavaScript Syntax Extension.</p>
+            <p style="font-size: 0.8em;" class="fragment fade-down">
               JSX allows us to write HTML in React.
             </p>
-            <p class="fragment fade-down">
-              JSX makes it easier to write and add HTML in React.
+            <p style="font-size: 0.8em;" class="fragment fade-down">
+              JSX requires conversion to be understood by web browsers.
             </p>
           </section>
           <section class="future" data-auto-animate>
@@ -199,6 +198,7 @@
 							const myElement = <h1>Code with JSX</h1>;
 							
 							const myElement = React.createElement('h1', {}, 'No JSX');
+                                     (type, [props], [...children])
 						</code></pre>
           </section>
           <section class="future" data-auto-animate>
@@ -216,12 +216,106 @@
 						</code></pre>
           </section>
         </section>
-
+<section>
         <section>
-          <h2>Components</h2>
-          <p>Piece of the UI that has its own logic and appearance.</p>
-          <p>Can be as small as a button, or as large as an entire page.</p>
+          <h3 id="fragment">Components</h3>
+          <p class="fragment fade-down" style="font-size: 0.8em;">Piece of the UI that has its own logic and appearance.</p>
+          <p class="fragment fade-down" style="font-size: 0.8em;">Components are like functions that return HTML elements.</p>
+          <p class="fragment fade-down" style="font-size: 0.8em;">Can be as small as a button, or as large as an entire page.</p>
+          <p class="fragment fade-down" style="font-size: 0.75em;">All components must act like pure functions with respect to their props.</p>
         </section>
+        <section>
+          <h2 id="fragment">Functional Components</h2>
+          <p class="fragment fade-down">No state of their own and contain only a render method.</p>
+          <pre
+              data-id="code-animation" class="fragment fade-down"
+            ><code class="hljs" data-trim data-line-numbers>
+							function Welcome(props) {
+                return <h1>Hello, {props.name}</h1>;
+              }
+						</code></pre>
+        </section>
+        <section>
+          <h2 id="fragment">Class Components</h2>
+          <p class="fragment fade-down" style="font-size: 0.7em;">Class components have a built-in state object and are more complex than functional components.</p>
+          <p class="fragment fade-down" style="font-size: 0.7em;">Requires a render() method that returns HTML.</p>
+          <p class="fragment fade-down" style="font-size: 0.7em;">Have access to a state which dictates the current behavior and appearance of the component
+          </p>
+          <pre
+              data-id="code-animation" class="fragment fade-down"
+            ><code class="hljs" data-trim data-line-numbers>
+							class Welcome extends React.Component {
+                render() {
+                  return <h1> Hello, {this.props.name}</h1>;
+              }
+            }
+						</code></pre>
+        </section>
+      </section>
+      <section>
+        <h2 id="fragment">State</h2>
+        <p style="font-size: 0.7em;" class="fragment fade-down">The state object stores property values that belongs to the component.</p>
+        <p style="font-size: 0.7em;" class="fragment fade-down">Whenever state changes, the component re-renders.</p>
+        <p style="font-size: 0.7em;" class="fragment fade-down">Multiple properties can be stored in the state object.</p>
+        <pre
+            data-id="code-animation" class="fragment fade-down"
+          ><code class="hljs" data-trim data-line-numbers>
+            class Car extends React.Component {
+              constructor(props) {
+                super(props);
+                this.state = {brand: "Ford"};
+              }
+              render() {
+                return (
+                  <div>
+                  <h1>My car is {this.state.brand}</h1>
+                  </div>
+                );
+              }
+            }
+          </code></pre>
+      </section>
+      <section>
+      <section>
+        <h2 id="fragment">Props</h2>
+        <p style="font-size: 0.8em;" class="fragment fade-down">Props stand for properties, and they are read-only components.</p>
+        <p style="font-size: 0.8em;" class="fragment fade-down">Props are arguments passed into React components.</p>
+        <p style="font-size: 0.8em;" class="fragment fade-down">Always passed down from the parent component to the child component.</p>
+        <p style="font-size: 0.8em;" class="fragment fade-down">Similar to function arguments in JavaScript and attributes in HTML.</p>
+      </section>
+      <section>
+        <pre
+            data-id="code-animation" class="fragment fade-down"
+          ><code style="width: 950px;" class="hljs" data-trim data-line-numbers>
+            function Car(props) {
+              return <h2>I am a { props.brand }!</h2>;
+            }
+            
+            function Garage() {
+              return (
+                  <h1>Who lives in my garage?</h1>
+                  <Car brand="Ford" />
+              );
+            }
+          </code></pre>
+
+          <div class="fragment fade-down">
+           <p>Who lives in my Garage?</p> 
+           <p>I am a Ford!</p>  
+          </div>
+      </section>
+    </section>
+    <section>
+      <h3 id="fragment">Advantages of React</h3>
+      <p style="font-size: 0.8em;">Component Based</p>
+      <p style="font-size: 0.8em;">Declarative</p>
+      <p style="font-size: 0.8em;">Reusability</p>
+      <p style="font-size: 0.8em;">Uniderictional data flow</p>
+      <p style="font-size: 0.8em;">SEO friendly</p>
+    </section>
+    <section>
+      <h1>Thanks!</h1>
+    </section>
       </div>
     </div>
 
